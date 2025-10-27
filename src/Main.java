@@ -25,7 +25,7 @@ public class Main {
         int choice = input.nextInt();
 
         if (choice < 1 || choice > cars.length) {
-            System.out.println("Pilihan tidak valid!");
+            System.out.println("Pilihan sangat tidak valid!");
             return;
         }
 
