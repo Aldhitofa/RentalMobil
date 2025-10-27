@@ -33,7 +33,13 @@ public class Main {
         System.out.print("Masukkan lama sewa (hari): ");
         int days = input.nextInt();
 
-        Rental rental = new Rental(selectedCar, days);
+        // Tambahan fitur asuransi
+        System.out.print("Apakah ingin menambah asuransi? (y/n): ");
+        char insuranceChoice = input.next().charAt(0);
+        boolean withInsurance = (insuranceChoice == 'y' || insuranceChoice == 'Y');
+
+        // Proses rental
+        Rental rental = new Rental(selectedCar, days, withInsurance);
         rental.calculateTotalPayment();
 
         System.out.println("\n=== NOTA PEMBAYARAN ===");
